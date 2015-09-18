@@ -8,11 +8,15 @@ class CartItem
 		
 	end
 
-	def increment1
+	def increment
 		@quantity = @quantity + 1
 	end
 
 	def product
 		 Product.find product_id
+	end
+
+	def total_price
+		product.price * quantity
 	end
 end

@@ -1,0 +1,6 @@
+-if @cart #if the cart exists
+	%p.navbar-text.navbar-right
+		=if @cart.empty? #chek if it is empty
+			Your cart is empty
+		-else
+			-link_to "You have #{pluralize @cart.count, "item"}.", cart_path
